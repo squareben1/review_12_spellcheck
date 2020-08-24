@@ -14,7 +14,9 @@ Again, I was pleased that I kept forcing myself to stick rigidly to process (or 
 
 Refactors were good - nice learning point was my decision to refactor inbuilt .split method to it's own method as this would allow for client's stated prospective future extension: accounting for punctuality. On the same note pleased I didn't refactor .downcase - no way this could be extended. A good distinction to remember. 
 
-Overriding concern throughout review was OOP Principle of encapsulation. Chose a class in order to store state privately and access with public methods. Also added a public #add method to this end after observation. 
+Overriding concern throughout review was OOP Principle of encapsulation. Chose a class in order to store state privately and access with public methods. 
+
+In line with potential future requirments I added a public #add method  after observation was over in order to further play with encapsulation.
 
 I think splitting the class into SRP coherent methods went well and allows for extension later without having to change much (Open/Closed).
 

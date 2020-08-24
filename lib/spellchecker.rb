@@ -14,13 +14,12 @@ class SpellChecker
   end
 
   def add_words(string)
-    words = split_string(string)
+    loop_add(string, @dictionary)
 
-    words.each do | word | 
-      @dictionary.push(word)
-    end
     @dictionary
   end
+
+
 
   private
 
@@ -36,6 +35,14 @@ class SpellChecker
       "~#{word}~"
     else
       word
+    end
+  end
+
+  def loop_add(string, target_arr)
+    words = split_string(string)
+
+    words.each do | word | 
+      target_arr.push(word)
     end
   end
 end
