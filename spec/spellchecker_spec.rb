@@ -17,5 +17,9 @@ describe SpellChecker do
     it 'returns string of mixed correct & incorrect words' do
       expect(subject.spellcheck("Correct incorct")).to eq "Correct ~incorct~"
     end
+
+    it 'returns new string of mixed correct & incorrect words' do
+      expect(subject.spellcheck("Correct incorct aple")).to eq "Correct ~incorct~ ~aple~"
+    end
   end
 end
