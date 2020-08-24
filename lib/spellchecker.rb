@@ -3,8 +3,12 @@ class SpellChecker
     @dictionary = ["correct"]
   end
 
+  def split_string(string)
+    string.split(" ")
+  end
+
   def spellcheck(string)
-    words = string.split(" ")
+    words = split_string(string)
     checked_words = []
 
     words.each do |word|
