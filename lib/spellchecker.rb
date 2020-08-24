@@ -7,19 +7,15 @@ class SpellChecker
     words = split_string(string)
     checked_words = []
 
-    words.each do |word|
-      checked_words.push(word_check(word))
-    end
+    loop_add_words_to_arr(string, checked_words, true)
     checked_words.join(" ")
   end
 
   def add_words(string)
-    loop_add(string, @dictionary)
+    loop_add_words_to_arr(string, @dictionary)
 
     @dictionary
   end
-
-
 
   private
 
@@ -38,11 +34,11 @@ class SpellChecker
     end
   end
 
-  def loop_add(string, target_arr)
+  def loop_add_words_to_arr(string, target_arr, check_word=false)
     words = split_string(string)
 
     words.each do | word | 
-      target_arr.push(word)
+      check_word ? target_arr.push(word_check(word)) : target_arr.push(word) 
     end
   end
 end
