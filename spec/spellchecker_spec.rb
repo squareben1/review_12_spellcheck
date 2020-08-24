@@ -39,7 +39,7 @@ describe SpellChecker do
       
     end
 
-    it 'lowercases word when adding to dictionary' do
+    it 'lowercases word when adding to dictionary inc base attribute' do
       expect(subject.add_words("Encapsulation")).to eq ["correct", "encapsulation"]
       expect(subject.spellcheck("encapsulation")).to eq "encapsulation"
     end

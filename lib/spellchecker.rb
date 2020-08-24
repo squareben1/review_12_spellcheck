@@ -4,15 +4,20 @@ class SpellChecker
   end
 
   def spellcheck(string)
+    words = split_string(string)
     checked_words = []
-
-    loop_add_words_to_arr(string, checked_words, true)
+    
+    words.each do | word | 
+      checked_words.push(word_check(word))
+    end
     checked_words.join(" ")
   end
 
   def add_words(string)
-    loop_add_words_to_arr(string, @dictionary)
-    homogenise_arr(@dictionary)
+    new_words = split_string(string)
+    lower_case_words = homogenise_arr(new_words)
+
+    @dictionary.push(*lower_case_words)
   end
 
   private
@@ -33,14 +38,6 @@ class SpellChecker
       "~#{word}~"
     else
       word
-    end
-  end
-
-  def loop_add_words_to_arr(string, target_arr, check_word=false)
-    words = split_string(string)
-
-    words.each do | word | 
-      target_arr.push(check_word ? word_check(word) : word)
     end
   end
 end
