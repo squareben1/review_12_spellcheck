@@ -1,7 +1,8 @@
 require 'spellchecker'
 
 describe SpellChecker do
-  subject = SpellChecker.new(["correct"])
+  subject = SpellChecker.new(["Correct"])
+
   describe '#spellcheck' do
     it 'returns an empty string' do
       expect(subject.spellcheck("")).to eq ""

@@ -1,6 +1,6 @@
 class SpellChecker 
   def initialize(dictionary=[])
-    @dictionary = dictionary
+    @dictionary = homogenise_arr(dictionary)
   end
 
   def spellcheck(string)
@@ -16,6 +16,10 @@ class SpellChecker
   end
 
   private
+
+  def homogenise_arr(arr)
+    arr.map!(&:downcase)
+  end
 
   def split_string(string)
     # gives potential for extension when client needs punctuation, etc.
