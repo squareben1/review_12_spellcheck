@@ -1,10 +1,9 @@
 class SpellChecker 
-  def initialize
-    @dictionary = ["correct"]
+  def initialize(dictionary=[])
+    @dictionary = dictionary
   end
 
   def spellcheck(string)
-    words = split_string(string)
     checked_words = []
 
     loop_add_words_to_arr(string, checked_words, true)
@@ -13,7 +12,6 @@ class SpellChecker
 
   def add_words(string)
     loop_add_words_to_arr(string, @dictionary)
-
     @dictionary
   end
 

@@ -1,6 +1,7 @@
 require 'spellchecker'
 
-describe SpellChecker do 
+describe SpellChecker do
+  subject = SpellChecker.new(["correct"])
   describe '#spellcheck' do
     it 'returns an empty string' do
       expect(subject.spellcheck("")).to eq ""
@@ -28,6 +29,10 @@ describe SpellChecker do
   end
 
   describe '#add_words' do
+    before :each do
+      subject = SpellChecker.new(["correct"])
+    end
+
     it 'adds single word to dictionary array with public method' do
       expect(subject.add_words("encapsulation")).to eq ["correct", "encapsulation"]
     end
