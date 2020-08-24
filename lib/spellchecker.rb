@@ -38,7 +38,7 @@ class SpellChecker
     words = split_string(string)
 
     words.each do | word | 
-      check_word ? target_arr.push(word_check(word)) : target_arr.push(word) 
+      target_arr.push(check_word ? word_check(word) : word)
     end
   end
 end
