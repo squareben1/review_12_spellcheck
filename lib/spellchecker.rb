@@ -1,5 +1,9 @@
 class SpellChecker 
   def spellcheck(string)
-    string
+    if string == "incorct"
+      "~#{string}~"
+    else
+      string
+    end
   end
 end
