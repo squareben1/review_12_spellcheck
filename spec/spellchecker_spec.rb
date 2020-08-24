@@ -13,5 +13,9 @@ describe SpellChecker do
     it 'returns an incorrectly spelled string highlighted with ~' do
       expect(subject.spellcheck("incorct")).to eq "~incorct~"
     end
+
+    it 'returns string of mixed correct & incorrect words' do
+      expect(subject.spellcheck("Correct incorct")).to eq "Correct ~incorct~"
+    end
   end
 end
