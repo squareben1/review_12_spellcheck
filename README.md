@@ -17,3 +17,34 @@ Refactors were good - nice learning point was my ecision to refactor inbuilt .sp
 Overriding concern throughout review was OOP Principle of encapsulation. I think splitting the class into SRP coherent methods went well and allows for extension later without having to change much (Open/Closed).
 
 Note from Catherine: Tendency to refactor on green - e.g. when I interpolated ```"~#{word}~"``` when simply returning the unchanged string would have done. "No harm in saving these refactors for the refactor stage - this makes it less likely that you'll tangle yourself up". 
+
+
+## Initial Requirements Gathering
+
+```
+Spell Checker 
+
+megasoftweird
+
+Word processor
+Spell checker
+
+functionality: 
+Take string - one or more words 
+Identify any incorrectly spelled words, highlight them and return string as output
+String: Same string as input but with typos highlighted with ~either~ side of misspelled word
+
+No list of words but will have in future - create something easy to populate - include a few words = Array  
+
+Empty string: “” - return string
+Capitalisation - if caps input > caps output
+punctuation: no punctuation in input, possible extension. 
+
+In / Out 
+“” > “”
+“Correct” > “Correct”
+“incorct” > “~incorct~”
+“Correct incorct” > “Correct ~incorct~”
+“Correct incorct aple” > “Correct ~incorct~ ~aple~”
+“cOrrect” > “cOrrect”
+```
