@@ -14,7 +14,12 @@ class SpellChecker
   end
 
   def add_words(string)
-    @dictionary.append(string)
+    words = split_string(string)
+
+    words.each do | word | 
+      @dictionary.push(word)
+    end
+    @dictionary
   end
 
   private

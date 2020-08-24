@@ -31,5 +31,9 @@ describe SpellChecker do
     it 'adds single word to dictionary array with public method' do
       expect(subject.add_words("encapsulation")).to eq ["correct", "encapsulation"]
     end
+
+    it 'adds multi words to dictionary array with public method' do
+      expect(subject.add_words("encapsulation abstraction")).to eq ["correct", "encapsulation", "abstraction"]
+    end
   end
 end
