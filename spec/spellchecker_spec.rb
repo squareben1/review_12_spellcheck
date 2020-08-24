@@ -10,6 +10,10 @@ describe SpellChecker do
       expect(subject.spellcheck("Correct")).to eq "Correct"
     end
 
+    it 'returns a correctly spelled string capitalised in same way as input' do
+      expect(subject.spellcheck("cOrrect")).to eq "cOrrect"
+    end
+
     it 'returns an incorrectly spelled string highlighted with ~' do
       expect(subject.spellcheck("incorct")).to eq "~incorct~"
     end

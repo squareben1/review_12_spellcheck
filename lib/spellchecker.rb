@@ -1,11 +1,11 @@
 class SpellChecker 
   def spellcheck(string)
-    dictionary = ["Correct"]
+    dictionary = ["correct"]
     words = string.split(" ")
     checked_words = []
 
     words.each do |word|
-      if !dictionary.include?(word)
+      if !dictionary.include?(word.downcase)
         checked_words.push("~#{word}~")
       else
         checked_words.push(word)
