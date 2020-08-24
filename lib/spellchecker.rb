@@ -12,7 +12,7 @@ class SpellChecker
 
   def add_words(string)
     loop_add_words_to_arr(string, @dictionary)
-    @dictionary
+    homogenise_arr(@dictionary)
   end
 
   private

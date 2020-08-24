@@ -38,6 +38,10 @@ describe SpellChecker do
       expect(subject.add_words("encapsulation")).to eq ["correct", "encapsulation"]
     end
 
+    it 'lowercases word when adding to dictionary' do
+      expect(subject.add_words("Encapsulation")).to eq ["correct", "encapsulation"]
+    end
+
     it 'adds multi words to dictionary array with public method' do
       expect(subject.add_words("encapsulation abstraction")).to eq ["correct", "encapsulation", "abstraction"]
     end
