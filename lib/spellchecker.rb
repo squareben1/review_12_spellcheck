@@ -4,7 +4,18 @@ class SpellChecker
   end
 
   def split_string(string)
+    # gives potential for extension when client needs punctuation, etc.
     string.split(" ")
+  end
+
+  def word_check(word)
+    down_case_word = word.downcase
+
+    if !@dictionary.include?(down_case_word)
+      "~#{word}~"
+    else
+      word
+    end
   end
 
   def spellcheck(string)
@@ -12,12 +23,7 @@ class SpellChecker
     checked_words = []
 
     words.each do |word|
-      down_case_word = word.downcase
-      if !@dictionary.include?(down_case_word)
-        checked_words.push("~#{word}~")
-      else
-        checked_words.push(word)
-      end
+      checked_words.push(word_check(word))
     end
     checked_words.join(" ")
   end
