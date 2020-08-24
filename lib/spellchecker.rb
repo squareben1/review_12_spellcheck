@@ -5,7 +5,8 @@ class SpellChecker
     checked_words = []
 
     words.each do |word|
-      if !dictionary.include?(word.downcase)
+      down_case_word = word.downcase
+      if !dictionary.include?(down_case_word)
         checked_words.push("~#{word}~")
       else
         checked_words.push(word)
