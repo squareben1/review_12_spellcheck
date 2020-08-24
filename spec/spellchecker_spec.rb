@@ -26,4 +26,10 @@ describe SpellChecker do
       expect(subject.spellcheck("Correct incorct aple")).to eq "Correct ~incorct~ ~aple~"
     end
   end
+
+  describe '#add_words' do
+    it 'adds single word to dictionary array with public method' do
+      expect(subject.add_words("encapsulation")).to eq ["correct", "encapsulation"]
+    end
+  end
 end

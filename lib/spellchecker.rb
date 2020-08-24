@@ -27,4 +27,9 @@ class SpellChecker
     end
     checked_words.join(" ")
   end
+
+  def add_words(string)
+    @dictionary.append(string)
+  end
+
 end
