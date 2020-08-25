@@ -2,6 +2,8 @@
 
 Simple observed Kata to test TDD process.
 
+Feedback PDF saved to repo. Live recording of session [here](https://www.youtube.com/watch?v=-UMWho2A6mg). 
+
 ## Retro
 
 Overall pleased with review. 
@@ -35,7 +37,7 @@ In interest of keeping thrings DRY I added the following method:
 
 I find this interesting for the check_word param but not sure if it really adheres to good practice. TODO - find this out.
 
-ANSWER: I think I sacrificed readability for the sake of keeping it DRY in a case where extracting a #loop method really wasn't that helpful. Have gone in and refactored this to make it simpler and more readable. 
+ANSWER: I think I sacrificed readability for the sake of keeping it DRY in a case where extracting a #loop method really wasn't that helpful. Have gone in and refactored this to make it simpler and more readable.
 
 Note from Catherine: Tendency to refactor on green - e.g. when I interpolated ```"~#{word}~"``` when simply returning the unchanged string would have done. "No harm in saving these refactors for the refactor stage - this makes it less likely that you'll tangle yourself up".
 
